@@ -1,0 +1,7 @@
+/* File: frontend/src/index.css */
+@import "tailwindcss";
+
+/* Custom styles HANYA jika diperlukan */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
