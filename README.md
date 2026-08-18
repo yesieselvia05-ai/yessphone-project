@@ -1,12 +1,4 @@
-Mantap! 🎉 Project sudah di-push ke GitHub. Sekarang kita buat **README.md** yang profesional dan panduan setup di PC baru.
 
----
-
-## 📄 FILE: `README.md`
-
-Buat file `README.md` di root folder `yessphone-project/` (sejajar dengan folder `backend` dan `frontend`), lalu isi dengan konten berikut:
-
-```markdown
 #  YessPhone Store
 
 Aplikasi web E-Commerce full-stack untuk penjualan smartphone, dibangun dengan **Node.js**, **React**, dan **MySQL**.
@@ -95,17 +87,14 @@ Pastikan sudah terinstall di PC:
 
 ### 1. Clone Repository
 
-```bash
 git clone https://github.com/USERNAME-KAMU/yessphone-project.git
 cd yessphone-project
-```
+
 
 ### 2. Setup Database MySQL
 
 Buka MySQL Workbench / phpMyAdmin / terminal MySQL, lalu jalankan:
 
-```sql
--- Buat database
 CREATE DATABASE yessphone_db;
 USE yessphone_db;
 
@@ -139,7 +128,6 @@ INSERT INTO users (username, password, role) VALUES
 
 ### 3. Setup Backend
 
-```bash
 # Masuk ke folder backend
 cd backend
 
