@@ -155,7 +155,6 @@ JWT_EXPIRE=1d
 
 ### 4. Setup Frontend
 
-```bash
 # Kembali ke root project
 cd ..
 
@@ -171,14 +170,13 @@ npm install
 Buka **2 terminal terpisah**:
 
 **Terminal 1 - Backend:**
-```bash
+
 cd backend
 node server.js
 ```
 Backend akan berjalan di: `http://localhost:5000`
 
 **Terminal 2 - Frontend:**
-```bash
 cd frontend
 npm run dev
 ```
@@ -194,25 +192,6 @@ Frontend akan berjalan di: `http://localhost:5173`
 
 ---
 
-## 🌐 API Endpoints
-
-### Auth
-| Method | Endpoint              | Deskripsi          | Auth |
-|--------|-----------------------|--------------------|------|
-| POST   | `/api/auth/login`     | Login user         | ❌   |
-| POST   | `/api/auth/register`  | Register user baru | ❌   |
-| GET    | `/api/auth/profile`   | Ambil profil user  | ✅   |
-
-### Phones
-| Method | Endpoint            | Deskripsi              | Auth     |
-|--------|---------------------|------------------------|----------|
-| GET    | `/api/phones`       | Ambil semua HP         | ❌       |
-| GET    | `/api/phones/:id`   | Ambil detail HP        | ❌       |
-| POST   | `/api/phones`       | Tambah HP baru         | ✅ Admin |
-| PUT    | `/api/phones/:id`   | Update HP              | ✅ Admin |
-| DELETE | `/api/phones/:id`   | Hapus HP               | ✅ Admin |
-
----
 
 ## 📝 Catatan Penting
 
@@ -220,168 +199,3 @@ Frontend akan berjalan di: `http://localhost:5173`
 - File `.env` **JANGAN** di-commit ke GitHub (sudah ada di `.gitignore`).
 - Gambar produk disimpan di `backend/uploads/` dengan path relatif di database.
 - Password admin sudah di-hash dengan bcrypt, **jangan** disimpan sebagai plain text.
-
----
-
-##  Future Improvements
-
-- [ ] Fitur pencarian & filter produk
-- [ ] Keranjang belanja (Shopping Cart)
-- [ ] Sistem checkout & pembayaran
-- [ ] Upload gambar ke Cloud Storage (AWS S3 / Cloudinary)
-- [ ] Unit testing & integration testing
-- [ ] Deploy ke production (Vercel + Railway)
-
----
-
-## 👨‍ Author
-
-Dibuat dengan ❤️ oleh **[Nama Kamu]**
-
----
-
-##  License
-
-Project ini dilisensikan di bawah [MIT License](LICENSE).
-```
-
----
-
-## 📄 FILE: `.gitignore` (PENTING!)
-
-Pastikan di root folder `yessphone-project/` ada file `.gitignore` agar file sensitif tidak ter-push ke GitHub:
-
-```gitignore
-# Dependencies
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Uploads folder (file gambar)
-backend/uploads/*
-!backend/uploads/.gitkeep
-
-# Build output
-dist/
-build/
-.vite/
-
-# OS files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs
-logs
-*.log
-```
-
-Buat juga file kosong `backend/uploads/.gitkeep` agar folder uploads tetap ada di repo (tapi isinya tidak):
-
-```bash
-# Di terminal
-touch backend/uploads/.gitkeep
-```
-
----
-
-## 🖥️ PANDUAN SETUP DI PC BARU
-
-Setelah kamu clone repo di PC baru, ikuti langkah ini:
-
-### Step 1: Clone Repository
-```bash
-git clone https://github.com/USERNAME-KAMU/yessphone-project.git
-cd yessphone-project
-```
-
-### Step 2: Install MySQL & Buat Database
-- Install MySQL di PC baru (atau pakai XAMPP)
-- Buka MySQL Workbench / terminal
-- Jalankan script SQL dari README bagian **"2. Setup Database MySQL"**
-
-### Step 3: Setup Backend
-```bash
-cd backend
-npm install
-```
-
-Lalu **buat file `.env`** di folder `backend/` dengan konfigurasi sesuai PC baru:
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=password_mysql_pc_baru  # ← GANTI INI!
-DB_NAME=yessphone_db
-DB_PORT=3306
-SERVER_PORT=5000
-JWT_SECRET=rahasia_baru_untuk_pc_ini_12345  # ← GANTI INI JUGA!
-JWT_EXPIRE=1d
-```
-
-### Step 4: Setup Frontend
-```bash
-cd ..
-cd frontend
-npm install
-```
-
-### Step 5: Jalankan
-Terminal 1:
-```bash
-cd backend
-node server.js
-```
-
-Terminal 2:
-```bash
-cd frontend
-npm run dev
-```
-
-Buka browser: `http://localhost:5173`
-
-Login dengan:
-- Username: `admin`
-- Password: `admin123`
-
----
-
-## 📌 Checklist Sebelum Push ke GitHub
-
-Sebelum push README ini, pastikan:
-
-- [ ] File `.gitignore` sudah ada di root project
-- [ ] File `backend/.env` **TIDAK** ter-commit (cek dengan `git status`)
-- [ ] Folder `backend/uploads/` ada file `.gitkeep`
-- [ ] README.md sudah di root folder
-- [ ] Test di PC baru berhasil
-
-Push update:
-```bash
-git add .
-git commit -m "Add README.md and .gitignore"
-git push origin main
-```
-
----
-
-**Sekarang project kamu sudah siap untuk:**
-1. ✅ Dilihat orang lain di GitHub dengan dokumentasi lengkap
-2. ✅ Di-setup di PC manapun dengan mudah
-3. ✅ Dikembangkan lebih lanjut tanpa bingung
-
-Selamat! Project YessPhone kamu sudah benar-benar profesional! 🚀
